@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 require 'bundler/setup'
 require 'colorize'
-require 'pod-cleaner'
+require 'pod-tools'
 
-PodCleaner.delete_derived_data
+PodTools.delete_derived_data

@@ -4,8 +4,8 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'pod-cleaner'
-  spec.version       = PodCleaner::VERSION
+  spec.name          = 'pod-tools'
+  spec.version       = PodTools::VERSION
   spec.authors       = ['cesar ferreira']
   spec.email         = ['cesar.manuel.ferreira@gmail.com']
 
@@ -13,9 +13,9 @@ Gem::Specification.new do |spec|
     #spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com' to prevent pushes to rubygems.org, or delete to allow pushes to any server."
   end
 
-  spec.summary       = 'Android Library Finder'
-  spec.description   = 'Android Library Finder'
-  spec.homepage      = "https://github.com/cesarferreira/alfi"
+  spec.summary       = 'Pod tools'
+  spec.description   = 'Pod tools'
+  spec.homepage      = "https://github.com/cesarferreira/pod-tools"
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }

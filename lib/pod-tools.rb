@@ -1,28 +1,30 @@
 require 'version'
-require 'rubygems'
-require 'uri'
 require 'colorize'
 
-module PodCleaner
+module PodTools
 
+  # Remove a file
   def self.remove_file(path)
     puts "  #{path.green}"
     to_remove = "rm -rf #{path}"
     FileUtils.rm_rf("#{path}", secure: true)
   end
 
+  # Reinstall Pods
   def self.reinstall(path)
     puts 'Reinstalling pods...'
     `pod install`
 
   end
 
+  # Delete all derived data
   def self.delete_derived_data
     puts 'Cleaning derived data...'
     deletion = `rm -rf ~/Library/Developer/Xcode/DerivedData/*`
     puts '  Derived data deleted!'.green
   end
 
+  # Remove Cocoapods' files
   def self.remove_podfiles(path)
     puts 'Cleaning Podfile related data...'
 
@@ -41,14 +43,14 @@ module PodCleaner
     end
   end
 
-  # INIT
-  def self.init(current_path)
+  # Delete podfiles
+  def self.delete_podfiles(current_path)
 
-    # todo check if file exists
+    # Check if you are on a project with Podfile
     bool = File.exist?("#{current_path}/Podfile")
 
     unless bool
-      puts "you're not on a XCode project".red
+      puts "You're not on a XCode project...".red
       exit 1
     end
 

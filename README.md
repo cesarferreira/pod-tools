@@ -1,4 +1,4 @@
-# Pod Cleaner
+# Pod Tools
 
 Clear CocoaPods cache, re-download and re-install all pods
 
@@ -7,24 +7,29 @@ Clear CocoaPods cache, re-download and re-install all pods
 
 Install it via terminal:
 
-    $ gem install pod-cleaner
+    $ gem install pod-tools
 
 ## Usage
 
 On your iOS project folder:
 
 ```bash
+# Clean cocoapods data
 pod-clean
+# Clean cocoapods data and Reinstall
+pod-reinstall
+# Clean all XCode derived data
+pod-clean-derived-data
 ```
 
 <p align="center">
-<img src="https://raw.github.com/cesarferreira/alfi/master/extras/images/terminal01.gif" />
+<img src="https://raw.github.com/cesarferreira/pod-tools/master/extras/images/terminal01.gif" />
 </p>
 
 
 ## Contributing
 
-1. Fork it ( https://github.com/cesarferreira/alfi/fork )
+1. Fork it ( https://github.com/cesarferreira/pod-tools/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)

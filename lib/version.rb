@@ -1,3 +1,3 @@
-module PodCleaner
+module PodTools
   VERSION = '0.1.0'
 end

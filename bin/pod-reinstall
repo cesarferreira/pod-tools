@@ -1,10 +1,10 @@
 #!/usr/bin/env ruby
 require 'bundler/setup'
 require 'colorize'
-require 'pod-cleaner'
+require 'pod-tools'
 
 current_path = `pwd`
 current_path = current_path.tr("\n","")
 
-PodCleaner.init(current_path)
-PodCleaner.reinstall(current_path)
+PodTools.delete_podfiles(current_path)
+PodTools.reinstall(current_path)
