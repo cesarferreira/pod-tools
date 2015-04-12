@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+require 'bundler/setup'
+require 'colorize'
+require 'pod-cleaner'
+
+current_path = `pwd`
+current_path = current_path.tr("\n","")
+
+PodCleaner.init(current_path)
+
+# https://gist.github.com/mbinna/4202236
