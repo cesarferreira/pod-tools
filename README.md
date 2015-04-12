@@ -1,6 +1,12 @@
 # Pod Tools
+![Header](https://travis-ci.org/cesarferreira/pod-tools.svg?branch=master) [![Gem Version](http://img.shields.io/gem/v/pod-tools.svg?style=flat)]
 
 Clear CocoaPods cache, re-download and re-install all pods
+
+
+<p align="center">
+<img alt="Insert GIF here" src="https://raw.github.com/cesarferreira/pod-tools/master/extras/images/terminal01.gif" />
+</p>
 
 
 ## Installation
@@ -21,10 +27,6 @@ pod-reinstall
 # Clean all XCode derived data
 pod-clean-derived-data
 ```
-
-<p align="center">
-<img src="https://raw.github.com/cesarferreira/pod-tools/master/extras/images/terminal01.gif" />
-</p>
 
 
 ## Contributing
