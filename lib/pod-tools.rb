@@ -14,7 +14,7 @@ module PodTools
   def self.reinstall(path)
     puts 'Reinstalling pods...'
     `pod install`
-
+    puts '  Pods reinstalled!'.green
   end
 
   # Delete all derived data

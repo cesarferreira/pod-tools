@@ -13,8 +13,8 @@ Gem::Specification.new do |spec|
     #spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com' to prevent pushes to rubygems.org, or delete to allow pushes to any server."
   end
 
-  spec.summary       = 'Set of Cocoapods tools (clean, reinstall, clean derived data)'
-  spec.description   = 'Pod tools'
+  spec.summary       = 'Set of Cocoapods tools'
+  spec.description   = 'Set of Cocoapods tools (clean, reinstall, clean derived data)'
   spec.homepage      = "https://github.com/cesarferreira/pod-tools"
   spec.license       = 'MIT'
 
