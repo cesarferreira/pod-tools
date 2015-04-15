@@ -6,8 +6,7 @@ module PodTools
   # Remove a file
   def self.remove_file(path)
     puts "  #{path.green}"
-    to_remove = "rm -rf #{path}"
-    FileUtils.rm_rf("#{path}", secure: true)
+    File.delete(path) if File.exist?(path)
   end
 
   # Reinstall Pods
@@ -20,7 +19,10 @@ module PodTools
   # Delete all derived data
   def self.delete_derived_data
     puts 'Cleaning derived data...'
-    deletion = `rm -rf ~/Library/Developer/Xcode/DerivedData/*`
+    derived_path = '~/Library/Developer/Xcode/DerivedData/*'
+
+    File.delete(derived_path) if File.exist?(derived_path)
+
     puts '  Derived data deleted!'.green
   end
 
@@ -39,7 +41,7 @@ module PodTools
     disposables.each do |item|
       full_path = "#{path}/#{item}"
       # remove item
-      remove_file (full_path)
+      remove_file(full_path)
     end
   end
 
